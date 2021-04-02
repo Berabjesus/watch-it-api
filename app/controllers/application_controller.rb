@@ -9,11 +9,11 @@ class ApplicationController < ActionController::API
   def encode user_id
     token = JWT.encode({
                          user_id: user_id,
-                       }, @@secret, 'HS256', { expiresIn: 24.hours.from_now.to_i })
+                       }, @secret, 'HS256', { expiresIn: 24.hours.from_now.to_i })
     token
   end
 
   def decode(token) 
-    JWT.decode(token, @@secret)
+    JWT.decode(token, @secret)
   end
 end
