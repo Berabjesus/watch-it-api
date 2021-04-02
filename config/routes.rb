@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :users, only: [:create]
       resources :watchlists
       post "signup", to: "users#create"
+      post "login", to: "users#login"
     end
   end
 end
