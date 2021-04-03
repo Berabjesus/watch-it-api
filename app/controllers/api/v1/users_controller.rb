@@ -7,7 +7,7 @@ module Api
           render json: {
             status: 'ok',
             meessage: 'User created',
-            token: grant_token(new_user.id)
+            token: get_token(new_user.id)
           }, status: :created
         else
           render json: {
@@ -23,25 +23,25 @@ module Api
         if user&.authenticate(user_params[:password])
           render json: {
             status: '202',
-            meessage: 'user can login',
-            token: grant_token(user.id)
+            message: 'user can login',
+            token: get_token(user.id)
           }, status: :accepted
         else
           render json: {
             status: 'Error',
-            meessage: 'Invalid user name or password',
+            message: 'Invalid user name or password',
           }, status: :unauthorized
         end
       end
 
       private
 
-      def grant_token id
+      def get_token id
         encode(id)
       end
 
       def user_params
-        params.permit(:name, :username, :password, :password_confirmation)
+        params.permit(:username, :password, :password_confirmation)
       end
     end
   end
