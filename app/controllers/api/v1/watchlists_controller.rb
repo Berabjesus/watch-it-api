@@ -22,7 +22,6 @@ module Api
           render json: {
             status: 'Error',
             message:custom_errors(new_item.errors),
-            data: new_item.errors
           }, status: :unprocessable_entity
         end
       end
@@ -36,7 +35,7 @@ module Api
       private
 
       def watchlist_params
-        params.permit(:username, :password, :password_confirmation)
+        params.permit(:title, :link, :content, :date)
       end
     end
   end
