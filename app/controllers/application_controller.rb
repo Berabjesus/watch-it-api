@@ -40,7 +40,22 @@ class ApplicationController < ActionController::API
     User.find(@current_user_id)
   end
 
+  def access_control
+    if !logged_in?
+      render json: {
+        status: '403',
+        meessage: 'unauthorized access',
+      }, status: :unauthorized
+    end
+  end
+
   def authorization_header
     request.headers.to_h["HTTP_AUTHORIZATION"]
+  end
+
+  def custom_errors(errors)
+    p '------===='
+    p errors.full_messages.split(",")[0]
+    errors.full_messages.split(",")[0]
   end
 end

@@ -13,7 +13,7 @@ module Api
         else
           render json: {
             status: 'Error',
-            meessage: 'Invalid signup',
+            message:custom_errors(new_user.errors),
             data: new_user.errors
           }, status: :unprocessable_entity
         end
