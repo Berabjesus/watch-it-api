@@ -6,7 +6,6 @@ class ApplicationController < ActionController::API
     super
     @secret = Rails.application.secrets.secret_key_base[0]
     @current_user_id = nil
-    @current_user = nil
   end
 
   def encode user_id
@@ -24,6 +23,8 @@ class ApplicationController < ActionController::API
       false
     else
       token = authorization_header.split(" ")[1]
+      p 'token'
+      p token
       begin
         decoded_token = decode(token)
       rescue StandardError
@@ -36,7 +37,7 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
-    @current_user = User.find(@current_user_id)
+    User.find(@current_user_id)
   end
 
   def authorization_header

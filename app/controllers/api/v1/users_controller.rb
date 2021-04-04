@@ -6,7 +6,8 @@ module Api
         if new_user.valid? && new_user.save
           render json: {
             status: 'ok',
-            meessage: 'User created',
+            message: 'User created',
+            username: new_user.username,
             token: get_token(new_user.id)
           }, status: :created
         else
@@ -23,7 +24,8 @@ module Api
         if user&.authenticate(user_params[:password])
           render json: {
             status: '202',
-            message: 'user can login',
+            message: 'login success',
+            username: user.username,
             token: get_token(user.id)
           }, status: :accepted
         else

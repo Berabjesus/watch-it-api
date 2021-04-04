@@ -8,7 +8,7 @@ module Api
             meessage: 'unauthorized access',
           }, status: :unauthorized
         else
-          user_watchlist = Watchlist.find_by_user_id(@current_user_id)
+          user_watchlist = current_user.watchlists.all
           render json: {
             status: '201',
             meessage: 'Data fetched',
