@@ -27,6 +27,19 @@ module Api
       end
 
       def update
+        item = current_user.watchlists.find(params[:id])
+        if item.update(article_params)
+          render json: {
+            status: 'ok',
+            message: 'Content updated',
+          }, status: :created
+        else
+          render json: {
+            status: 'Error',
+            message:custom_errors(new_item.errors),
+          }, status: :unprocessable_entity
+        end
+    
       end
 
       def destroy
