@@ -1,5 +1,5 @@
-module Api
-  module V1
+# module Api
+#   module V1
     class WatchlistsController < ApplicationController
       before_action :access_control
       def index
@@ -62,5 +62,5 @@ module Api
         params.permit(:title, :link, :content, :date, :id)
       end
     end
-  end
-end
+#   end
+# end

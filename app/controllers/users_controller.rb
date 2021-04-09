@@ -1,5 +1,5 @@
-module Api
-  module V1
+# module Api
+#   module V1
     class UsersController < ApplicationController
       def create
         new_user = User.new(user_params)
@@ -46,5 +46,5 @@ module Api
         params.permit(:username, :password, :password_confirmation)
       end
     end
-  end
-end
+#   end
+# end
