@@ -5,7 +5,7 @@ class ApplicationController < ActionController::API
 
   def initialize
     super
-    @secret = Rails.application.secrets.secret_key_base[0]
+    @secret = 'bereket'
     @current_user_id = nil
   end
 
