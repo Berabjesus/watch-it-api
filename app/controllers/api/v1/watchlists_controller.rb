@@ -16,12 +16,12 @@ module Api
         if new_item.valid? && new_item.save
           render json: {
             status: 'ok',
-            message: 'Content created',
+            message: 'Content created'
           }, status: :created
         else
           render json: {
             status: 'Error',
-            message:custom_errors(new_item.errors),
+            message: custom_errors(new_item.errors)
           }, status: :unprocessable_entity
         end
       end
@@ -31,12 +31,12 @@ module Api
         if item.update(watchlist_params)
           render json: {
             status: 'ok',
-            message: 'Content updated',
+            message: 'Content updated'
           }, status: :created
         else
           render json: {
             status: 'Error',
-            message:custom_errors(new_item.errors),
+            message: custom_errors(new_item.errors)
           }, status: :unprocessable_entity
         end
       end
@@ -46,12 +46,12 @@ module Api
         if item.destroy
           render json: {
             status: 'ok',
-            message: 'Content deleted',
+            message: 'Content deleted'
           }, status: :created
         else
           render json: {
             status: 'Error',
-            message:custom_errors(new_item.errors),
+            message: custom_errors(new_item.errors)
           }, status: :unprocessable_entity
         end
       end

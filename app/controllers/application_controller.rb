@@ -2,16 +2,17 @@ class ApplicationController < ActionController::API
   # if the token verificaion fails
   rescue_from JWT::VerificationError, with: 'false'
   attr_reader :current_user_id
-  def initialize 
+
+  def initialize
     super
     @secret = Rails.application.secrets.secret_key_base[0]
     @current_user_id = nil
   end
 
-  def encode user_id
+  def encode(user_id)
     JWT.encode({
-                  user_id: user_id,
-                  }, @secret, 'HS256', { expiresIn: 24.hours.from_now.to_i })
+                 user_id: user_id
+               }, @secret, 'HS256', { expiresIn: 24.hours.from_now.to_i })
   end
 
   def decode(token)
@@ -22,7 +23,7 @@ class ApplicationController < ActionController::API
     if !authorization_header
       false
     else
-      token = authorization_header.split(" ")[1]
+      token = authorization_header.split(' ')[1]
       p 'token'
       p token
       begin
@@ -41,21 +42,21 @@ class ApplicationController < ActionController::API
   end
 
   def access_control
-    if !logged_in?
+    unless logged_in?
       render json: {
         status: '403',
-        meessage: 'unauthorized access',
+        meessage: 'unauthorized access'
       }, status: :unauthorized
     end
   end
 
   def authorization_header
-    request.headers.to_h["HTTP_AUTHORIZATION"]
+    request.headers.to_h['HTTP_AUTHORIZATION']
   end
 
   def custom_errors(errors)
     p '------===='
-    p errors.full_messages.split(",")[0]
-    errors.full_messages.split(",")[0]
+    p errors.full_messages.split(',')[0]
+    errors.full_messages.split(',')[0]
   end
 end

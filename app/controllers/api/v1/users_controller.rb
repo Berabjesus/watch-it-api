@@ -13,7 +13,7 @@ module Api
         else
           render json: {
             status: 'Error',
-            message:custom_errors(new_user.errors),
+            message: custom_errors(new_user.errors),
             data: new_user.errors
           }, status: :unprocessable_entity
         end
@@ -31,14 +31,14 @@ module Api
         else
           render json: {
             status: 'Error',
-            message: 'Invalid user name or password',
+            message: 'Invalid user name or password'
           }, status: :unauthorized
         end
       end
 
       private
 
-      def get_token id
+      def get_token(id)
         encode(id)
       end
 
