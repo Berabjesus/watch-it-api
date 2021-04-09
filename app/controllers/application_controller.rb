@@ -55,8 +55,6 @@ class ApplicationController < ActionController::API
   end
 
   def custom_errors(errors)
-    p '------===='
-    p errors.full_messages.split(',')[0]
     errors.full_messages.split(',')[0]
   end
 end
