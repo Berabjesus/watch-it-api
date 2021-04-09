@@ -74,3 +74,29 @@
 - Run `rails db:migrate RAILS_ENV=test`
 
 - Run  ```rspec ``` to run the tests.
+
+
+# Author
+
+👤 **Bereket Beshane**
+
+- Github: [@berabjesus](https://github.com/Berabjesus)
+- Twitter: [@bereket_ababu_b](https://twitter.com/bereket_ababu_b)
+- Linkedin: [linkedin](https://www.linkedin.com/in/bereketbeshane)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the [issues page]().
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+- Heroku
+
+## 📝 License
