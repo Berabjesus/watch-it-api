@@ -42,12 +42,14 @@ class ApplicationController < ActionController::API
   end
 
   def access_control
+    # rubocop:disable Style/GuardClause
     unless logged_in?
       render json: {
         status: '401',
         meessage: 'unauthorized access'
       }, status: :unauthorized
     end
+    # rubocop:enable Style/GuardClause
   end
 
   def authorization_header
