@@ -142,7 +142,7 @@ Give a ⭐️ if you like this project!
 
 MIT
 
-[contributors-shield]: https://img.shields.io/github.com/Berabjesus/watch-it-api
+[contributors-shield]: https://img.shields.io/github.com/contributors/Berabjesus/watch-it-api
 [contributors-url]: https://github.com/Berabjesus/watch-it-api/contributors
 [forks-shield]: https://img.shields.io/github/forks/Berabjesus/watch-it-api
 [forks-url]:https://github.com/Berabjesus/watch-it-api/network/members
