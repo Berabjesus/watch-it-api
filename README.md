@@ -39,7 +39,7 @@
   
 | HTTP METHOD | POST            | GET       | PUT         | DELETE |
 | ----------- | --------------- | --------- | ----------- | ------ |
-| CRUD OP     | CREATE          | READ      | UPDATE      | DELETE |
+| CRUD Operation     | CREATE          | READ      | UPDATE      | DELETE |
 
 ### Sample GET request
 ```
@@ -69,6 +69,28 @@
 
 # Login Tutorial on Postman
 
+- 1. Select the post asction and enter the login url as specified above. 
+  ![image](https://user-images.githubusercontent.com/64360974/114250910-ee357100-99a7-11eb-9ea5-38a2d3e7b0d4.png)
+- 2. Set the header section as seen in the picture below
+  ![image](https://user-images.githubusercontent.com/64360974/114250971-1fae3c80-99a8-11eb-91b8-99f265dc95d0.png)
+- 3. Specify the username and password in the body.
+  ![image](https://user-images.githubusercontent.com/64360974/114251018-47050980-99a8-11eb-870a-bc49fbcf3e74.png)
+- 4. If everythings goes right you should see the response below.
+  ![image](https://user-images.githubusercontent.com/64360974/114251053-66039b80-99a8-11eb-8378-ee40bbaf847e.png)
+
+# Response and Error Types.
+
+| Status Message | code            | Meaning       |
+| ----------- | --------------- | --------- |
+| Data fetched     | 202          | Accepted      |
+| login success     | 202          | Accepted      |
+| Content created     | 201          | Created      |
+| User created     | 201          | Created      |
+| Error     | 422          | unprocessable entity      |
+| Error     | 401          | unauthorized      |
+| Error     | 400          | bad request      |
+| Error     | 404          | not found      |
+| Error     | 50*         | Server errors     |
 
 # Run tests
 - Run `rails db:migrate RAILS_ENV=test`
@@ -99,4 +121,4 @@ Give a ⭐️ if you like this project!
 - Microverse
 - Heroku
 
-## 📝 License
+## 📝 License- 
