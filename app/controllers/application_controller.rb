@@ -44,7 +44,7 @@ class ApplicationController < ActionController::API
   def access_control
     unless logged_in?
       render json: {
-        status: '403',
+        status: '401',
         meessage: 'unauthorized access'
       }, status: :unauthorized
     end

@@ -1,5 +1,11 @@
 # Watch.it Api
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![License: MIT][license-shield]][license-url]
+
 > This a Ruby on Rails REST api that serves the front-end application and/or other automatic tools for verifying the APIs to create user, get JWT token keys to create, view, edit and delete a watchlists. It has its specific API endpoints to access the functionalities either through a front-end application or other tools such as postman. 
 
 # Getting Started
@@ -110,7 +116,7 @@
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page]().
+Feel free to check the [issues page](https://github.com/Berabjesus/watch-it-api/issues).
 
 ## Show your support
 
@@ -122,3 +128,16 @@ Give a ⭐️ if you like this project!
 - Heroku
 
 ## 📝 License- 
+
+MIT
+
+[contributors-shield]: https://img.shields.io/https://github.com/Berabjesus/watch-it-api
+[contributors-url]: https://github.com/Berabjesus/watch-it-api/contributors
+[forks-shield]: https://img.shields.io/github/forks/Berabjesus/watch-it-api
+[forks-url]:https://github.com/Berabjesus/watch-it-api/network/members
+[stars-shield]: https://img.shields.io/github/stars/Berabjesus/watch-it-api
+[stars-url]: https://github.com/Berabjesus/watch-it-api/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Berabjesus/watch-it-api
+[issues-url]: https://github.com/Berabjesus/watch-it-api/issues
+[license-shield]: https://img.shields.io/badge/License-MIT-yellow.svg
+[license-url]: https://github.com/Berabjesus/watch-it-api/development/LICENSE

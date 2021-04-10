@@ -5,7 +5,7 @@ module Api
       def index
         user_watchlist = current_user.watchlists.all
         render json: {
-          status: '201',
+          status: '202',
           meessage: 'Data fetched',
           data: user_watchlist
         }, status: :accepted
