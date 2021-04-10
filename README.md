@@ -6,7 +6,18 @@
 [![Issues][issues-shield]][issues-url]
 [![License: MIT][license-shield]][license-url]
 
+
+
 > This a Ruby on Rails REST api that serves the front-end application and/or other automatic tools for verifying the APIs to create user, get JWT token keys to create, view, edit and delete a watchlists. It has its specific API endpoints to access the functionalities either through a front-end application or other tools such as postman. 
+
+# Built With
+
+- Ruby
+- Ruby on Rails
+- jwt gem
+- Rspec
+- Bcrypt
+- Rubocop
 
 # Getting Started
 - Make sure you have installed [Rails](https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm)
@@ -131,7 +142,7 @@ Give a ⭐️ if you like this project!
 
 MIT
 
-[contributors-shield]: https://img.shields.io/https://github.com/Berabjesus/watch-it-api
+[contributors-shield]: https://img.shields.io/github.com/Berabjesus/watch-it-api
 [contributors-url]: https://github.com/Berabjesus/watch-it-api/contributors
 [forks-shield]: https://img.shields.io/github/forks/Berabjesus/watch-it-api
 [forks-url]:https://github.com/Berabjesus/watch-it-api/network/members
