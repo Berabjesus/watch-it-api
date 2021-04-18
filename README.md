@@ -9,7 +9,7 @@
 
 > This a Ruby on Rails REST api that serves the front-end application and/or other automatic tools for verifying the APIs to create user, get JWT token keys to create, view, edit and delete a watchlists. It has its specific API endpoints to access the functionalities either through a front-end application or other tools such as postman. 
 
-# Front-end repo link : -[visit](https://github.com/Berabjesus/Watch-it-front-end/tree/working-branch)
+### Front-end repo link : -[visit](https://github.com/Berabjesus/Watch-it-front-end/tree/working-branch)
 
 # Built With
 
