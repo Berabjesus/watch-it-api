@@ -5,7 +5,7 @@ module Api
         user = User.find_by(username: user_params[:username])
         if user&.authenticate(user_params[:password])
           render json: {
-            status: '202',
+            status: '200',
             message: 'login success',
             username: user.username,
             token: get_token(user.id)

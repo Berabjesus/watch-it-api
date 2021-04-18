@@ -5,7 +5,7 @@ module Api
       def index
         user_watchlist = current_user.watchlists.all
         render json: {
-          status: '202',
+          status: '200',
           meessage: 'Data fetched',
           data: user_watchlist
         }, status: :accepted
@@ -13,9 +13,9 @@ module Api
 
       def create
         new_item = current_user.watchlists.new(watchlist_params)
-        if new_item.valid? && new_item.save
+        if new_item.save
           render json: {
-            status: 'ok',
+            status: '200',
             message: 'Content created'
           }, status: :created
         else
@@ -30,9 +30,9 @@ module Api
         item = current_user.watchlists.find(params[:id])
         if item.update(watchlist_params)
           render json: {
-            status: 'ok',
+            status: '200',
             message: 'Content updated'
-          }, status: :created
+          }, status: :ok
         else
           render json: {
             status: 'Error',
@@ -45,9 +45,9 @@ module Api
         item = current_user.watchlists.find(params[:id])
         if item.destroy
           render json: {
-            status: 'ok',
+            status: '200',
             message: 'Content deleted'
-          }, status: :created
+          }, status: :ok
         else
           render json: {
             status: 'Error',
