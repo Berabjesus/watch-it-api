@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   namespace 'api' do
     namespace 'v1' do
-      resources :users, only: [:create]
+      resources :users
       resources :watchlists
       post "signup", to: "users#create"
-      post "login", to: "users#login"
+      post "login", to: "sessions#create"
     end
   end
 end
