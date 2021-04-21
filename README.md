@@ -101,8 +101,8 @@
 
 | Status Message | code            | Meaning       |
 | ----------- | --------------- | --------- |
-| Data fetched     | 202          | Accepted      |
-| login success     | 202          | Accepted      |
+| Data fetched     | 200          | ok      |
+| login success     | 200          | ok      |
 | Content created     | 201          | Created      |
 | User created     | 201          | Created      |
 | Error     | 422          | unprocessable entity      |

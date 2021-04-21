@@ -5,14 +5,12 @@ module Api
         user = User.find_by(username: user_params[:username])
         if user&.authenticate(user_params[:password])
           render json: {
-            status: '200',
             message: 'login success',
             username: user.username,
             token: get_token(user.id)
-          }, status: :accepted
+          }, status: :ok
         else
           render json: {
-            status: 'Error',
             message: 'Invalid user name or password'
           }, status: :unauthorized
         end

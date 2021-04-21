@@ -5,22 +5,19 @@ module Api
       def index
         user_watchlist = current_user.watchlists.all
         render json: {
-          status: '200',
           meessage: 'Data fetched',
           data: user_watchlist
-        }, status: :accepted
+        }, status: :ok
       end
 
       def create
         new_item = current_user.watchlists.new(watchlist_params)
         if new_item.save
           render json: {
-            status: '200',
             message: 'Content created'
           }, status: :created
         else
           render json: {
-            status: 'Error',
             message: custom_errors(new_item.errors)
           }, status: :unprocessable_entity
         end
@@ -30,12 +27,10 @@ module Api
         item = current_user.watchlists.find(params[:id])
         if item.update(watchlist_params)
           render json: {
-            status: '200',
             message: 'Content updated'
           }, status: :ok
         else
           render json: {
-            status: 'Error',
             message: custom_errors(new_item.errors)
           }, status: :unprocessable_entity
         end
@@ -45,7 +40,6 @@ module Api
         item = current_user.watchlists.find(params[:id])
         if item.destroy
           render json: {
-            status: '200',
             message: 'Content deleted'
           }, status: :ok
         else
